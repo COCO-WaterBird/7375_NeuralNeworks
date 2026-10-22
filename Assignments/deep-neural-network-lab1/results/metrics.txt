@@ -1,0 +1,5 @@
+Test Loss: 0.0354
+Test Accuracy: 0.9950
+Confusion Matrix:
+[[ 99   1]
+ [  0 100]]
