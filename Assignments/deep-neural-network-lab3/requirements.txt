@@ -1,0 +1,9 @@
+# Lab 3 - Tuning of a Multilayer Neural Network
+# Dependencies required to run main.py
+tensorflow==2.21.0
+keras==3.15.1
+keras-tuner==1.4.8
+numpy==2.5.4
+matplotlib==3.11.2
+scikit-learn==1.9.1
+tensorboard==2.21.0

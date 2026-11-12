@@ -1,0 +1,14 @@
+{
+  "num_layers": 3,
+  "units_0": 32,
+  "units_1": 48,
+  "activation": "tanh",
+  "dropout": 0.0,
+  "l2": 3.804600009693789e-06,
+  "optimizer": "adam",
+  "learning_rate": 0.008153129053064945,
+  "batch_size": 48,
+  "units_2": 40,
+  "units_3": 64,
+  "units_4": 32
+}

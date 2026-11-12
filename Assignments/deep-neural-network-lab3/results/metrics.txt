@@ -1,0 +1,55 @@
+LAB 3 - TUNING OF A MULTILAYER NEURAL NETWORK
+=======================================================
+
+Random seed            : 42
+Tuner trials           : 16
+Max epochs per trial   : 60
+
+--- Baseline (Lab 2 hyper-parameters) ---
+Config                 : {'layers': [10, 8, 8, 4], 'activation': 'relu', 'dropout': 0.0, 'l2': 0.0, 'optimizer': 'adam', 'learning_rate': 0.001, 'batch_size': 32}
+Trainable parameters   : 231
+Best validation acc    : 0.9812
+Test accuracy (mean)   : 0.9900 (+/- 0.0000)
+Test loss (mean)       : 0.0871 (+/- 0.0583)
+Per-seed accuracies    : [0.99, 0.99, 0.99]
+
+--- Best hyper-parameters found by the tuner ---
+num_layers             : 3
+units_0                : 32
+units_1                : 48
+activation             : tanh
+dropout                : 0.0
+l2                     : 3.804600009693789e-06
+optimizer              : adam
+learning_rate          : 0.008153129053064945
+batch_size             : 48
+units_2                : 40
+units_3                : 64
+units_4                : 32
+
+--- Candidate selection (top-3 retrained over 5 seeds) ---
+rank 1: tuner score 0.0927 | mean val loss 0.0997 (+/- 0.0177) | mean val acc 0.9604
+rank 2: tuner score 0.0929 | mean val loss 0.0947 (+/- 0.0225) | mean val acc 0.9583
+rank 3: tuner score 0.1127 | mean val loss 0.1112 (+/- 0.0289) | mean val acc 0.9583
+
+--- Tuned model ---
+Trainable parameters   : 3681
+Best validation acc    : 0.9812
+Test accuracy (mean)   : 0.9883 (+/- 0.0062)
+Test loss (mean)       : 0.0439 (+/- 0.0077)
+Per-seed accuracies    : [0.98, 0.995, 0.99]
+Accuracy improvement   : -0.0017
+
+Confusion Matrix:
+[[ 99   1]
+ [  0 100]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0     1.0000    0.9900    0.9950       100
+           1     0.9901    1.0000    0.9950       100
+
+    accuracy                         0.9950       200
+   macro avg     0.9950    0.9950    0.9950       200
+weighted avg     0.9950    0.9950    0.9950       200
