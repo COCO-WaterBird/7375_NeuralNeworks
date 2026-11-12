@@ -13,7 +13,7 @@ Test accuracy (mean)   : 0.9900 (+/- 0.0000)
 Test loss (mean)       : 0.0871 (+/- 0.0583)
 Per-seed accuracies    : [0.99, 0.99, 0.99]
 
---- Best hyper-parameters found by the tuner ---
+--- Selected configuration (best mean validation loss) ---
 num_layers             : 3
 units_0                : 32
 units_1                : 48
@@ -27,7 +27,7 @@ units_2                : 40
 units_3                : 64
 units_4                : 32
 
---- Candidate selection (top-3 retrained over 5 seeds) ---
+--- Candidate selection (top-3 retrained over 3 seeds) ---
 rank 1: tuner score 0.0927 | mean val loss 0.0997 (+/- 0.0177) | mean val acc 0.9604
 rank 2: tuner score 0.0929 | mean val loss 0.0947 (+/- 0.0225) | mean val acc 0.9583
 rank 3: tuner score 0.1127 | mean val loss 0.1112 (+/- 0.0289) | mean val acc 0.9583
@@ -40,11 +40,11 @@ Test loss (mean)       : 0.0439 (+/- 0.0077)
 Per-seed accuracies    : [0.98, 0.995, 0.99]
 Accuracy improvement   : -0.0017
 
-Confusion Matrix:
+Confusion Matrix (best seed):
 [[ 99   1]
  [  0 100]]
 
-Classification Report:
+Classification Report (best seed):
               precision    recall  f1-score   support
 
            0     1.0000    0.9900    0.9950       100

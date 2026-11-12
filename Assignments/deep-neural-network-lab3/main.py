@@ -603,12 +603,12 @@ with open("results/metrics.txt", "w") as f:
     f.write(f"Per-seed accuracies    : "
             f"{[round(v, 4) for v in baseline_result['accuracies']]}\n\n")
 
-    f.write("--- Best hyper-parameters found by the tuner ---\n")
+    f.write("--- Selected configuration (best mean validation loss) ---\n")
     for k, v in best_config.items():
         f.write(f"{k:<23}: {v}\n")
     f.write("\n")
 
-    f.write("--- Candidate selection (top-3 retrained over 5 seeds) ---\n")
+    f.write("--- Candidate selection (top-3 retrained over 3 seeds) ---\n")
     for c in candidate_report:
         f.write(
             f"rank {c['rank']}: tuner score {c['tuner_score']:.4f} | "
@@ -628,9 +628,9 @@ with open("results/metrics.txt", "w") as f:
     f.write(f"Per-seed accuracies    : "
             f"{[round(v, 4) for v in tuned_result['accuracies']]}\n")
     f.write(f"Accuracy improvement   : {tuned_test_acc - baseline_test_acc:+.4f}\n\n")
-    f.write("Confusion Matrix:\n")
+    f.write("Confusion Matrix (best seed):\n")
     f.write(str(confusion_matrix(y_test, y_pred)))
-    f.write("\n\nClassification Report:\n")
+    f.write("\n\nClassification Report (best seed):\n")
     f.write(classification_report(y_test, y_pred, digits=4))
 
 
